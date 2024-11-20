@@ -8,7 +8,9 @@ function App() {
 
   return (
     <div>
-      react fonksiyon
+      react egitimi 1
+      react egitimi 2
+      react egitimi 3
     </div>
       /* <div>
         <a href="https://vite.dev" target="_blank">
