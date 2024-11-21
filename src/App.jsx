@@ -11,24 +11,21 @@ function App() {
   // const [count, setCount] = useState(0)
   //props - kavrami
   //let name ="react"
-  const [name, setName] =useState("react")
+  const [count, setCount] =useState(0)
   //const [degisken, degiskeni setlemek istedigin fonksiyon]
 
-  const clickFunc = () => {
-    console.log("click islemi yapildi...")
-    setName("react degisti ...")
+  const decrement = () => {
+    if(count <= 0) return
+    setCount(count -1)
+    //setCount(prev => prev -1)
   }
 
   return (
     <>
-    <Text number={"1"} name={"React"}/>
-    <Text number={"2"} name={"Reactt"}/>
-    <Text number={"3"} name={"Reacttt"}/>
-    <Button name={"Arttir"}/>
-    <Button name={"Azalt"}/>
-    <div onClick={clickFunc}>
-      {name}
-    </div>
+      <Button name={"Azalt -"} onClick={() => setCount(count - 1)}/>
+      <button onClick={decrement}>Azalt</button>
+      <div>{count}</div>
+      <button onClick={() => setCount(count + 1)}>Arttir</button>
     </>
       /* <div>
         <a href="https://vite.dev" target="_blank">
