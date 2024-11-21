@@ -11,21 +11,17 @@ function App() {
   // const [count, setCount] = useState(0)
   //props - kavrami
   //let name ="react"
-  const [count, setCount] =useState(0)
-  //const [degisken, degiskeni setlemek istedigin fonksiyon]
+  const [name, setName] =useState(null)
+  
+  console.log(name, "name")
 
-  const decrement = () => {
-    if(count <= 0) return
-    setCount(count -1)
-    //setCount(prev => prev -1)
+  const targetFunc = (e) => {
+    setName(e.target.value)
   }
 
   return (
     <>
-      <Button name={"Azalt -"} onClick={() => setCount(count - 1)}/>
-      <button onClick={decrement}>Azalt</button>
-      <div>{count}</div>
-      <button onClick={() => setCount(count + 1)}>Arttir</button>
+      <input type="text" onChange={targetFunc}/>
     </>
       /* <div>
         <a href="https://vite.dev" target="_blank">
