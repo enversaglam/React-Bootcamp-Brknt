@@ -3,15 +3,20 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css' */
 
+import Button from "./components/Button"
+import Text from "./components/Text"
+
 function App() {
   // const [count, setCount] = useState(0)
-
+  //props - kavrami
   return (
-    <div>
-      react egitimi 1
-      react egitimi 2
-      react egitimi 3
-    </div>
+    <>
+    <Text number={"1"} name={"React"}/>
+    <Text number={"2"} name={"Reactt"}/>
+    <Text number={"3"} name={"Reacttt"}/>
+    <Button name={"Arttir"}/>
+    <Button name={"Azalt"}/>
+    </>
       /* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
