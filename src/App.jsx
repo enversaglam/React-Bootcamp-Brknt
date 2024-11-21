@@ -3,12 +3,22 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css' */
 
+import { useState } from "react"
 import Button from "./components/Button"
 import Text from "./components/Text"
 
 function App() {
   // const [count, setCount] = useState(0)
   //props - kavrami
+  //let name ="react"
+  const [name, setName] =useState("react")
+  //const [degisken, degiskeni setlemek istedigin fonksiyon]
+
+  const clickFunc = () => {
+    console.log("click islemi yapildi...")
+    setName("react degisti ...")
+  }
+
   return (
     <>
     <Text number={"1"} name={"React"}/>
@@ -16,6 +26,9 @@ function App() {
     <Text number={"3"} name={"Reacttt"}/>
     <Button name={"Arttir"}/>
     <Button name={"Azalt"}/>
+    <div onClick={clickFunc}>
+      {name}
+    </div>
     </>
       /* <div>
         <a href="https://vite.dev" target="_blank">
