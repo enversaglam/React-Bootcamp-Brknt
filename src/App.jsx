@@ -6,12 +6,14 @@ import './App.css' */
 import { useState } from "react"
 import Button from "./components/Button"
 import Text from "./components/Text"
+import Falan from "./components/Falan"
 
 function App() {
   // const [count, setCount] = useState(0)
   //props - kavrami
   //let name ="react"
   const [name, setName] =useState(null)
+  const [data, setData] =useState(null)
   
   console.log(name, "name")
 
@@ -19,9 +21,15 @@ function App() {
     setName(e.target.value)
   }
 
+  const clickFunc = () => {
+    setData(name)
+  }
+
   return (
     <>
       <input type="text" onChange={targetFunc}/>
+      <button onClick={clickFunc}>Tikla</button>
+      <div><h3>{data}</h3></div>
     </>
       /* <div>
         <a href="https://vite.dev" target="_blank">
