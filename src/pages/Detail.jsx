@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import { data } from './Home';
 
 const Detail = () => {
     const { id } = useParams();
     const [getData, setGetData] = useState(null)
+
+    const location = useLocation();
+
+    console.log(location.pathname, "location")
 
     useEffect(() => {
         //if (id) setGetData(data.find(dte => dte.id == id))
