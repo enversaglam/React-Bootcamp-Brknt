@@ -12,7 +12,7 @@ function App() {
   //props - kavrami
   //let name ="react"
   const [name, setName] =useState(null)
-  const [data, setData] =useState(null)
+  const [data, setData] =useState([])
   
   console.log(name, "name")
 
@@ -21,14 +21,22 @@ function App() {
   }
 
   const clickFunc = () => {
-    setData(name)
+    setData(prev => ([...prev, name]))
   }
 
+  console.log(data, "data")
+  
   return (
     <>
       <input type="text" onChange={targetFunc}/>
       <button onClick={clickFunc}>Tikla</button>
-      <div><Text name={data}/></div>
+      <div>
+        {
+          data.map((dt,i) => (
+            <div key={i} >{dt}</div>
+        ))
+        }
+      </div>
     </>
       /* <div>
         <a href="https://vite.dev" target="_blank">
