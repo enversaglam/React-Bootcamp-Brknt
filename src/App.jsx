@@ -1,5 +1,7 @@
 import { useMemo, useState } from "react"
-
+//https://www.youtube.com/watch?v=nhhNRF1gb6M&t=6828s
+//useCallback ve React.memo kavramları n da kaldim
+//suan biraz karisik geldigi icin daha sonra bakacagim
 
 function App() {
   const [count, setCount] = useState(0)
